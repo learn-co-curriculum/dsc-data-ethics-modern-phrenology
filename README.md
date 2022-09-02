@@ -1,5 +1,27 @@
 # AI Phrenology and How to Avoid It
 
+## Introduction
+
+When you are choosing a topic for a machine learning project, you have a lot of options! Particularly when you are a student and you get to invent the narrative for why a particular column should be the target, the number of choices can quickly get overwhelming.
+
+This lesson details some kinds of targets you should _not_ try to build a project around predicting, in order to avoid performing "AI phrenology".
+
+## Objectives
+
+* Define phrenology
+* Describe examples of AI projects that resemble phrenology
+
+## Phrenology
+
+<a title="See page for author, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Phrenology_journal_(1848).jpg"><img width="256" alt="Phrenology journal (1848)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Phrenology_journal_%281848%29.jpg/256px-Phrenology_journal_%281848%29.jpg"></a>
+
+[Phrenology](https://en.wikipedia.org/wiki/Phrenology) is a type of pseudoscience first introduced in the the late 1700s. Practitioners of phrenology believed that the shapes of bumps on the human skull could tell you information about the person's personality, character, and psychology. Phrenology was used to uphold racist and sexist beliefs that were common at the time, and also to determine what sort of punishment or rehabilitation a person accused of a crime might receive.
+
+Phrenology was already discredited by the end of the late 1800s and is no longer widely in use. However it continues to be a useful point of comparison for modern-day pseudoscience. In particular, [people tend to make comparisons to phrenology](https://www.vice.com/en/article/g5pawq/an-ai-paper-published-in-a-major-journal-dabbles-in-phrenology) any time someone tries to predict or analyze some attribute using data that is unrelated to that attribute, the way that bumps on a skull are unrelated to the attributes that phrenologists claimed to be measuring.
+
+## What Not to Predict
+
+
 * Applications of ML and pseudoscience
 * Some things cannot be measured
 * Limitations of ML (emotion, gender) and proxy measurement
@@ -16,3 +38,9 @@ ML systems attempting to do this incorrectly measure physical attributes that ar
 Emotion “detection” tools use the beliefs and assumptions of their creators to classify emotions. The range of human emotions is vast and far from universal. As data scientists, we must understand the hard limits of tools like Machine learning and where they come from. ML cannot be used to detect emotion because the data (images) don’t match the model (image classifier), but ML cannot detect emotion because physical movements are a poor proxy for true emotion. 
 
 Although various human phenomena can’t be measured, misguided researchers still publish papers that leverage digital phrenology for criminality detection, another use case where ML fails. Without a proper education on scientific history, it’s easy to make often repeated mistakes that can harm various marginalized communities. 
+
+## Additional Resources
+
+* [Phrenology's History and Influence](https://www.verywellmind.com/what-is-phrenology-2795251)
+
+## Summary

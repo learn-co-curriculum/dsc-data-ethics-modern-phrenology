@@ -10,6 +10,7 @@ This lesson details some kinds of targets you should _not_ try to build a projec
 
 * Define phrenology
 * Describe examples of AI projects that resemble phrenology
+* List the types of machine learning targets to avoid
 
 ## Phrenology
 
@@ -17,30 +18,47 @@ This lesson details some kinds of targets you should _not_ try to build a projec
 
 [Phrenology](https://en.wikipedia.org/wiki/Phrenology) is a type of pseudoscience first introduced in the the late 1700s. Practitioners of phrenology believed that the shapes of bumps on the human skull could tell you information about the person's personality, character, and psychology. Phrenology was used to uphold racist and sexist beliefs that were common at the time, and also to determine what sort of punishment or rehabilitation a person accused of a crime might receive.
 
-Phrenology was already discredited by the end of the late 1800s and is no longer widely in use. However it continues to be a useful point of comparison for modern-day pseudoscience. In particular, [people tend to make comparisons to phrenology](https://www.vice.com/en/article/g5pawq/an-ai-paper-published-in-a-major-journal-dabbles-in-phrenology) any time someone tries to predict or analyze some attribute using data that is unrelated to that attribute, the way that bumps on a skull are unrelated to the attributes that phrenologists claimed to be measuring.
+Phrenology was already discredited by the end of the late 1800s and is no longer widely in use. However it continues to be a useful point of comparison for modern-day pseudoscience. In particular, [people tend to make comparisons to phrenology](https://www.inputmag.com/culture/lemonade-swears-it-totally-isnt-using-ai-for-phrenology) any time someone tries to predict or analyze some attribute using data that is unrelated to that attribute, the way that bumps on a skull are unrelated to the attributes that phrenologists claimed to be measuring.
 
 ## What Not to Predict
 
+Image data (e.g. photos of faces) and text data (e.g. names) tend to be the most susceptible to modern phrenology attempts. This kind of data tends to be widely available, and both businesses and governments might be interested in inferring information about people based on these pieces of data.
 
-* Applications of ML and pseudoscience
-* Some things cannot be measured
-* Limitations of ML (emotion, gender) and proxy measurement
-* Teaching data scientists scientific history
+### Personality Traits
 
-Although much of the work in statistics was done to enable “racial hygiene”, some of the pseudoscientific applications of ML are still being used and proposed today. Due to various reasons, most notably a lack of historical science education and social science being taught to engineers, we still have applications of ML arise that perpetuate many debunked pseudosciences. 
+Trying to predict personality traits based on a face or a name is the AI phrenology that most closely resembles historical phrenology. There is no evidence whatsoever that appearance can predict these things, but that has not stopped some people from trying to predict [trustworthiness](https://www.vice.com/en/article/g5pawq/an-ai-paper-published-in-a-major-journal-dabbles-in-phrenology), [criminality](https://www.americanscientist.org/article/the-dark-past-of-algorithms-that-associate-appearance-and-criminality), and [jobworthiness](https://www.washingtonpost.com/technology/2019/10/22/ai-hiring-face-scanning-algorithm-increasingly-decides-whether-you-deserve-job/).
 
-Some examples include using ML to attempt gender and emotion classification, as well as criminality based on images of human subjects. Using one’s outward appearance to predict factors like criminality are under the umbrella of phrenology, a pseudoscience which attempts to predict mental traits based on the bumps, shape, and size of one’s skull. The largest assumption this method makes is that one’s outward appearance impacts each individual’s traits. The same assumptions are made by engineers to predict traits using images and machine learning today. 
+If you're interested in reading more about the issues with predicting these attributes, check out the links above. The main problem here is not that personality traits are impossible to predict, but that the data being used here is inappropriate for the intended target.
 
-While big tech companies have developed and sell emotion and gender detection software, these tools leverage phrenology’s assumptions and are inadequate applications of machine learning. In fact, machine learning cannot detect criminality, gender, emotion, or race.
+### Sensitive Features
 
-ML systems attempting to do this incorrectly measure physical attributes that are mere proxies for unobservable human phenomenon. Take emotions for example, while a smile may be an indicator of happiness, we cannot assume a smile means happiness to everyone in every context. Due to varying cultural differences, assumptions about specific facial movements cannot be applied across large populations of people. A smile is a measurable proxy, but not an emotion. People don’t always outwardly show their true emotions, and inference on what face someone is making is intrinsically tied to the assumptions of those building and annotating images. 
+Regardless of the type of input data being used, predicting sensitive features can be an ethical minefield and should only be done in very rare circumstances, if at all. Attempting to predict things like [sexual orientation](https://www.glaad.org/blog/glaad-and-hrc-call-stanford-university-responsible-media-debunk-dangerous-flawed-report), [ethnicity](https://www.vanityfair.com/news/2019/04/china-created-a-racist-artificial-intelligence-to-track-muslims), and [disability status](https://www.brookings.edu/blog/techtank/2019/10/31/for-some-employment-algorithms-disability-discrimination-by-default/) can bring real-world harm to people regardless of the accuracy of the models being used.
 
-Emotion “detection” tools use the beliefs and assumptions of their creators to classify emotions. The range of human emotions is vast and far from universal. As data scientists, we must understand the hard limits of tools like Machine learning and where they come from. ML cannot be used to detect emotion because the data (images) don’t match the model (image classifier), but ML cannot detect emotion because physical movements are a poor proxy for true emotion. 
+One example of when it might be _appropriate_ to try to predict a sensitive feature is if you are specifically trying to measure disparities or discrimination. For example, researchers studying [disparities in citation counts based on race and gender](https://www.socialsciencespace.com/2021/11/keeping-an-eye-on-who-we-cite-and-who-we-dont/) needed to predict the race and gender of most authors in their database in order to determine if they were being discriminated against.
 
-Although various human phenomena can’t be measured, misguided researchers still publish papers that leverage digital phrenology for criminality detection, another use case where ML fails. Without a proper education on scientific history, it’s easy to make often repeated mistakes that can harm various marginalized communities. 
+If you decide to build a model that predicts a sensitive feature because you believe that you have a strong enough reason, try to make sure you consult with the people who might be marginalized on the basis of that feature in order to avoid any unintended harms.
+
+### (Nearly) Impossible to Measure Features
+
+![grid of photos of different facial expressions](facial_expressions.jpg)
+
+<p><small>Image credit <a href="https://www.pexels.com/photo/collage-photo-of-woman-3812743/">Andrea Piacquadio</a></small></p>
+
+The one other type of feature to watch out for is a feature where the "ground truth" is (nearly) impossible to determine. A classic example of this is ***emotion detection***.
+
+There are two main ways that a set of photographs can be turned into an emotion detection database:
+
+1. The people being photographed are asked to make a facial expression that represents a particular emotion
+2. Data labelers are asked to look at photos and infer emotions from facial expressions
+
+In both cases, what is being measured is a ***proxy*** for the person's emotion, not their actual emotion. You can read more about the ethical challenges of different proxies for emotion [here](https://osf.io/9ad4u/).
 
 ## Additional Resources
 
-* [Phrenology's History and Influence](https://www.verywellmind.com/what-is-phrenology-2795251)
+* [Phrenology's History and Influence](https://www.verywellmind.com/what-is-phrenology-2795251) (web article)
+* [Citation inequities in the social sciences: The case of Communication studies - Dr Deen Freelon](https://youtu.be/F3N65rFcawA) (YouTube video)
+* [Physiognomic Artificial Intelligence](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3927300) (research paper calling for legislative action)
 
 ## Summary
+
+Out of all the options for building a machine learning model, make sure you avoid dabbling in AI phrenology. This means not predicting personality traits based on images or names, not predicting sensitive features unless there is a very good reason, and not claiming you can predict an attribute while actually predicting a proxy for it.

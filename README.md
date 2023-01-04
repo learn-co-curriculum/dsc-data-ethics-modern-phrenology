@@ -18,6 +18,7 @@ This lesson details some kinds of targets you should _not_ try to build a projec
 <img src="https://curriculum-content.s3.amazonaws.com/data-science/images/v3_ethics/Phase-0/images/dsc-ethics-p1-rep1-1.jpg" alt="Cover of Phrenology Journal from 1848 that contains an illustration of a human skull divided into subsections that contains the illustrators depiction of different human thoughts represented as humans engaged in various activities, like dancing and studying. The words 'agreeableness' and 'memory' also appear." width=250/>
 </td></tr></table>
 
+
 [Phrenology](https://en.wikipedia.org/wiki/Phrenology) is a type of pseudoscience first introduced in the the late 1700s. Practitioners of phrenology believed that the shapes of bumps on the human skull could tell you information about the person's personality, character, and psychology. Phrenology was used to uphold racist and sexist beliefs that were common at the time, and also to determine what sort of punishment or rehabilitation a person accused of a crime might receive.
 
 Phrenology was already discredited by the end of the late 1800s and is no longer widely in use. However it continues to be a useful point of comparison for modern-day pseudoscience. In particular, [people tend to make comparisons to phrenology](https://www.inputmag.com/culture/lemonade-swears-it-totally-isnt-using-ai-for-phrenology) any time someone tries to predict or analyze some attribute using data that is unrelated to that attribute, the way that bumps on a skull are unrelated to the attributes that phrenologists claimed to be measuring.
@@ -39,11 +40,11 @@ One example of when it might be _appropriate_ to try to predict a sensitive feat
 If you decide to build a model that predicts a sensitive feature because you believe that you have a strong enough reason, try to make sure you consult with the people who might be marginalized on the basis of that feature in order to avoid any unintended harms.
 
 ### (Nearly) Impossible to Measure Features
+The one other type of feature to watch out for is a feature where the "ground truth" is (nearly) impossible to determine. A classic example of this is ___emotion detection___.
+
 > <table><tr><td>
 <img src="https://curriculum-content.s3.amazonaws.com/data-science/images/v3_ethics/Phase-0/images/dsc-ethics-p1-rep1-2.jpg" alt="A grid containing images of a woman. Each square on the grid depicts the woman making a different facial expression. " height=250/>
 </td></tr></table>
-
-The one other type of feature to watch out for is a feature where the "ground truth" is (nearly) impossible to determine. A classic example of this is ___emotion detection___.
 
 There are two main ways that a set of photographs can be turned into an emotion detection database:
 

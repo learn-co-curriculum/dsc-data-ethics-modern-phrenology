@@ -3,7 +3,7 @@
 ## Introduction
 In this course, you will be introduced to a number of data science topics from coding with Python, statistics, databases, natural language processing, and more. Data science is a relatively new field and every day data scientists are challenged with ethical questions for which there are little regulations and precedent to dictate their course of action. 
 
-When you are choosing a topic for a machine learning project, you have a lot of options, particularly when you are a student. As information technology professionals, it is crucial that we use good science to ensure that the insights we report to our stakeholders are based on sound evidence and not __pseudo-science__.
+When you are choosing a topic for a machine learning project, you have a lot of options, particularly when you are a student. As information technology professionals, it is crucial that you use good science to ensure that the insights you report to your stakeholders are based on sound evidence and not __pseudo-science__.
 
 This lesson details some kinds of targets you should _not_ try to build a project around predicting, in order to avoid performing "AI phrenology".
 
